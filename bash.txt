@@ -15,4 +15,11 @@
 		list_dir $1
 	}
 }
-
+002) 字符串切割 {
+	http://blog.csdn.net/finewings/article/details/5718133;
+	export TEST=123abc456abc789;
+	echo ${TEST#*abc}          ===>删掉123abc剩下456abc789;
+	echo ${TEST##*abc}       ===>删掉123abc456abc剩下"789;
+	echo ${TEST%abc*}        ===>删掉abc789剩下123abc456;
+	echo ${TEST%%abc*}    ===>删掉abc456abc789剩下123;
+}
