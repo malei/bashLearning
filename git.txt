@@ -10,3 +10,4 @@ git push origin:refs/tags/v.1.0
 
 git tag -l
 #just for test
+git show v.1.0
