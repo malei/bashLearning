@@ -13,4 +13,6 @@ git tag -l
 git show v.1.0
 
 git checkout v.1.0
+tag是快照是不能修改的,所以不需要git pull origin tagID
 git checkout master
+
