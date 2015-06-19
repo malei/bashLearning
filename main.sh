@@ -1,4 +1,9 @@
 #!/bin/bash
 
-echo ${@:1:($#-1)}
 
+a=`find . -type f`
+echo $a
+for p in  `find . -type f`
+do
+	echo $p
+done

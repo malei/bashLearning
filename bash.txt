@@ -14,6 +14,17 @@
 		}
 		list_dir $1
 	}
+	002. {
+		list_dir() {
+			node_dir=$1
+			for file in  `find $node_dir -type f`
+			do
+				echo "file: "$file;
+				#filter_file $file
+			done
+		}
+		list_dir $1
+	}
 }
 002) 字符串切割 {
 	http://blog.csdn.net/finewings/article/details/5718133;
@@ -76,8 +87,7 @@
 			echo '$var1 not eq $var2'
 	fi
 }
-
-004) 函数调用参数自动后移
+004) 函数调用参数自动后移 args :echo ${@:1:($#-1)}
 005) source 的变量的自动改变
 006) args :echo ${@:1:($#-1)}
 007) /bin/bash run.sh 新启动一个进程
