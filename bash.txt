@@ -91,3 +91,4 @@
 005) source 的变量的自动改变
 006) args :echo ${@:1:($#-1)}
 007) /bin/bash run.sh 新启动一个进程
+008) (cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xvfp- )
